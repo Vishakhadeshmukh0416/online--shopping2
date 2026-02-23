@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Shopping</title>
+</head>
+<body>
+    <h1>Online Shopping Store</h1>
+
+    {% for item in products %}
+        <p>{{ item.name }} - ₹{{ item.price }}</p>
+    {% endfor %}
+</body>
+</html>
