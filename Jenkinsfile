@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/Vishakhadeshmukh0416/online--shopping2.git'
+                git branch: 'main', url: 'https://github.com/Vishakhadeshmukh0416/online--shopping2.git'
             }
         }
 
