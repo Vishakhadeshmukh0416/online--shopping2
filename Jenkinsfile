@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Clone Repository') {
+            steps {
+                git 'https://github.com/Vishakhadeshmukh0416/online--shopping2.git'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                bat 'pip install -r requirements.txt'
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                bat 'python test_app.py'
+            }
+        }
+
+    }
+}
